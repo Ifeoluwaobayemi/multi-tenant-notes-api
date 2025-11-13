@@ -16,7 +16,12 @@ async def lifespan(app: FastAPI):
     app.state.db_client.close()
 
 def create_app():
-    app = FastAPI(title="Multi-tenant Notes API", lifespan=lifespan)
+    app = FastAPI(
+        title="Multi-tenant Notes API", 
+        lifespan=lifespan,
+        docs_url="/api/docs",
+        redoc_url="/api/redoc"
+    )
 
     # optional header middleware
     app.add_middleware(HeaderTenantMiddleware)

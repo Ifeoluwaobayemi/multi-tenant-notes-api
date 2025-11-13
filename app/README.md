@@ -58,6 +58,16 @@ docker-compose exec web pytest
 
 The tests will run against the database specified in your `.env` file. For a clean test run, the tests will clear all data from the collections at the beginning of the test session.
 
+### 4. API Documentation
+
+The API documentation is automatically generated using FastAPI's Swagger UI. Once the application is running, you can access the interactive documentation at:
+
+[http://localhost:8000/api/docs](http://localhost:8000/api/docs)
+
+Alternatively, you can view the ReDoc documentation at:
+
+[http://localhost:8000/api/redoc](http://localhost:8000/api/redoc)
+
 ---
 
 ## Example API Requests
